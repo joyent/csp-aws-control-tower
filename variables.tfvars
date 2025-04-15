@@ -33,7 +33,7 @@ controls = [
       "8sw3pbid15t9cbww8d2w2qwgf", # AWS-GR_S3_BUCKET_PUBLIC_READ_PROHIBITED
       "9j9nwxj789d82sypnukhyyowy", # AWS-GR_S3_BUCKET_PUBLIC_WRITE_PROHIBITED
     ],
-    organizational_unit_ids = ["ou-1111-11111111", "ou-2222-22222222"],
+    organizational_unit_ids = ["ou-mdk9-edi88i4x"],
   },
   {
     control_names = [
@@ -55,6 +55,6 @@ controls = [
       "66gfl06uj1v999z53szvu0exa", # AWS-GR_SAGEMAKER_NOTEBOOK_NO_DIRECT_INTERNET_ACCESS
       "dfanrd8y5p7oj8fjyugqnakfr", # AWS-GR_SSM_DOCUMENT_NOT_PUBLIC
     ],
-    organizational_unit_ids = ["ou-1111-11111111"],
+    organizational_unit_ids = ["ou-mdk9-89ns8e3r"],
   },
 ]

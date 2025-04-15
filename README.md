@@ -274,3 +274,12 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE) file.
+
+## Usage
+
+```bash
+export AWS_PROFILE=AWSAdministratorAccess-205930626766
+terraform init -upgrade
+terraform plan -var-file="variables.tfvars"
+terraform apply -var-file="variables.tfvars"
+```
