@@ -1,0 +1,1 @@
+aws organizations list-roots | jq -r '.Roots[0].Id' | xargs -I {} aws organizations list-organizational-units-for-parent --parent-id {} | jq -r '.OrganizationalUnits[] | "\(.Id)\t\(.Name)"'
