@@ -1,0 +1,9 @@
+Account Name,Account ID,CloudTrail Configured,AWS Config Enabled,VPC Flow Logs Active,Permission for Audit (AssumeRole),Delivery to Central Bucket (org-logs-bucket),Notes
+DevClient,342334428669,Pending,Pending,Pending,Pending,Pending,
+DevLab,340605141517,Pending,Pending,Pending,Pending,Pending,
+DevMDAS,238611950423,Pending,Pending,Pending,Pending,Pending,
+DevVPC,280721295080,Pending,Pending,Pending,Pending,Pending,
+dx-aws-dev,685645913737,Pending,Pending,Pending,Pending,Pending,
+QE,608419177901,Pending,Pending,Pending,Pending,Pending,
+Product,072130783399,Pending,Pending,Pending,Pending,Pending,
+SysOps,740141504546,Pending,Pending,Pending,Pending,Pending,

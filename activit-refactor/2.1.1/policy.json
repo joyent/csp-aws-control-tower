@@ -1,0 +1,21 @@
+
+
+###Create a custom SCP that blocks actions performed by the root user based on a Condition such as:
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyRootActions",
+      "Effect": "Deny",
+      "Action": "*",
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "aws:userid": "*:root"
+        }
+      }
+    }
+  ]
+}
+

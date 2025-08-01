@@ -1,0 +1,33 @@
+###This ensures only the listed IAM Admins can manage permissions. All others (even admins by accident) are blocked.
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyIAMPermissionManagementForNonAdmins",
+      "Effect": "Deny",
+      "Action": [
+        "iam:CreateUser",
+        "iam:DeleteUser",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:AttachUserPolicy",
+        "iam:AttachRolePolicy",
+        "iam:PutUserPolicy",
+        "iam:PutRolePolicy",
+        "iam:PutGroupPolicy",
+        "iam:CreatePolicy",
+        "iam:AddUserToGroup"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:PrincipalArn": [
+            "arn:aws:iam::123456789012:role/IAMAccountAdmin",
+            "arn:aws:iam::123456789012:user/security-lead"
+          ]
+        }
+      }
+    }
+  ]
+}

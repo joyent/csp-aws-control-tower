@@ -1,0 +1,18 @@
+###This is very restrictive and may need to be scoped by NotAction, or applied only in non-prod OUs for testing.
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyWildcardActionsAndResources",
+      "Effect": "Deny",
+      "Action": "*",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "us-east-1"
+        }
+      }
+    }
+  ]
+}

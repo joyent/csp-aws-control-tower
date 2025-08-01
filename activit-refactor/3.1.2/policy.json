@@ -1,0 +1,25 @@
+###This example targets wildcard permissions. You can strengthen it by auditing policies that contain Action: "*" and Resource: "*", or restrict creation of customer-managed policies altogether unless needed.
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyAttachWildcardPolicy",
+      "Effect": "Deny",
+      "Action": [
+        "iam:AttachUserPolicy",
+        "iam:AttachRolePolicy",
+        "iam:PutUserPolicy",
+        "iam:PutRolePolicy",
+        "iam:CreatePolicy"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEqualsIfExists": {
+          "iam:PermissionsBoundary": "arn:aws:iam::*:policy/*FullAccess"
+        }
+      }
+    }
+  ]
+}

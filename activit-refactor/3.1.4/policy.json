@@ -1,0 +1,34 @@
+### Adjust the role name patterns to match your naming conventions. You can scope even more tightly using tags or specific ARNs.
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyIAMPermissionsFromComputeRoles",
+      "Effect": "Deny",
+      "Action": [
+        "iam:AttachUserPolicy",
+        "iam:AttachRolePolicy",
+        "iam:PutUserPolicy",
+        "iam:PutRolePolicy",
+        "iam:CreateUser",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:DeleteUser",
+        "iam:AddUserToGroup",
+        "iam:PassRole"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "aws:PrincipalArn": [
+            "arn:aws:iam::*:role/ecsTaskExecutionRole*",
+            "arn:aws:iam::*:role/lambda-exec-*",
+            "arn:aws:iam::*:role/eksNodeRole*",
+            "arn:aws:iam::*:role/ec2-*"
+          ]
+        }
+      }
+    }
+  ]
+}

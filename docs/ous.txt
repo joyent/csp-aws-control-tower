@@ -1,0 +1,14 @@
+ou-mdk9-0v7d92zd	Suspended
+ou-mdk9-3hzq0utb	Policy Staging
+ou-mdk9-745mq3fy	Sandbox
+ou-mdk9-89ns8e3r	Deployments
+ou-mdk9-h4yxc4yl	  Development
+ou-mdk9-jvj1ulg5	  Staging
+ou-mdk9-vdjs7ymb	  Production
+ou-mdk9-edi88i4x	Workloads
+ou-mdk9-9o8kdv6h	  Production
+ou-mdk9-kq8jii09	  Development
+ou-mdk9-yust11t0	  Staging
+ou-mdk9-emyt03lh	Security
+ou-mdk9-qj96e0m8	Exceptions
+ou-mdk9-tjuhrevk	Infrastructure
